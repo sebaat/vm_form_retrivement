@@ -10,7 +10,7 @@ function TabNetwork(number) {
 
 // todo change tablinks to tabLinks.
     function htmlTabLinkNetwork(number) {
-        return `<button onclick="openTab(event, 'network${number}','network${number.substr(0, number.indexOf('-'))}')" class="tabLinks-network${number.substr(0, number.indexOf('-'))}">network${number}</button>`;
+        return `<button type="button" onclick="openTab(event, 'network${number}','network${number.substr(0, number.indexOf('-'))}')" class="tabLinks-network${number.substr(0, number.indexOf('-'))}">network${number}</button>`;
     }
 
     function htmlTabContentNetwork(number) {
@@ -18,15 +18,15 @@ function TabNetwork(number) {
     padding: 12px 12px;
     border: 1px solid #ccc;
     border-top: none;" class="tabContent-network${number.substr(0, number.indexOf('-'))}">
-    <select>
-        <option>public network</option>
-        <option>privet network</option>
+    <select name="networkType${number}">
+        <option value="public network">public network</option>
+        <option value="privet network">privet network</option>
     </select>
-    <select>
-        <option>dhcp</option>
-        <option>static</option>
+    <select name="IpAssignment${number}">
+        <option value="dhcp">dhcp</option>
+        <option value="static">static</option>
     </select>
-    <input type="text" placeholder="Enter the ip Address"  > <!--required-->
+    <input type="text" placeholder="Enter the ip Address" name="ipAddress${number}"  > 
 </div>`;
     }
 
