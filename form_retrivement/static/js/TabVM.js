@@ -56,9 +56,9 @@ function TabVM(number) {
     function htmlTabContent(number) {
         return `<div id="VM${number}" class="tabContent-vm ">
     <label><b>Virtual Machine</b></label>
-    <input type="text" placeholder="Enter Virtual Machine ID" name="vm_id${number}">
-    <input type="text" placeholder="Enter Vagrant Box Name" name="boxName${number}">
-    <input type="password" placeholder="Enter Password" name="password${number}">
+    <input type="text" placeholder="Enter Virtual Machine ID" name="vm_id${number}" required>
+    <input type="text" placeholder="Enter Vagrant Box Name" name="boxName${number}" required>
+    <input type="password" placeholder="Enter Password" name="password${number}" required>
 
     <label><b>Network</b></label>
     <button type="button" class="network-add-button">Add</button>
